@@ -1,0 +1,132 @@
+:root {
+    padding: 0;
+    margin: 0;
+    --primary-text: #DCD7C9;
+    --secondary-text: #A27B5C;
+    --primary-bg-color: #2C3639;
+    --secondary-bg-color: #3F4E4F;
+    color: var(--primary-text);
+}
+
+div, nav, header, body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--primary-bg-color);
+}
+
+h2 {
+    font-size: 3.2rem;
+}
+
+p {
+    font-size: 28px;
+    margin: 0;
+    line-height: 40px;
+}
+
+a {
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: var(--secondary-text);
+    padding: 10px;
+
+    &:hover {
+        color: white;
+    }
+}
+
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-text);
+    gap: 4rem;
+    height: min(75px, 50vh);
+
+
+
+}
+
+#content {
+
+
+    .content__intro {
+        background: url(./images/coffee1.jpg);
+        background-position-y: -150px;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.5);
+        // filter: brightness(40%);
+        font-size: 3rem;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        #hero-text {
+            color: whitesmoke;
+        }
+    }
+    
+}
+
+.content__welcome {
+    margin-block: 2rem;
+    margin-inline: auto;
+    width: min(1400px, 80vw);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+
+    p {
+        width: min(90%, 80vw);
+    }
+
+    h2 {
+        padding: 1rem;
+        margin: 1rem;
+    }
+}
+
+.content__whyUs {
+    background-color: #3F4E4F;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+
+    p {
+        width: min(70%, 80vw);
+    }
+
+    h2 {
+        padding: 1rem;
+        margin: 1rem;
+    }
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--primary-text);
+    height: min(60px, 10vh);
+    color: var(--secondary-text);
+    // gap: 6rem;
+    align-items: center;
+    font-size: 1.3rem;
+    
+    a {
+        text-decoration: none;
+        color: var(--secondary-text);
+    }
+}
