@@ -7,7 +7,6 @@ export default function getHomePage() {
 
 const homeHTML = 
 `
-      <div id="content">
         <div class="content__intro">
           <h1 id="hero-text">The Coffee Hut</h1>
         </div>
@@ -52,5 +51,4 @@ const homeHTML =
             forward to serving you soon.
           </p>
         </div>
-      </div>
 `

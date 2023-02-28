@@ -3,9 +3,21 @@
     margin: 0;
     --primary-text: #DCD7C9;
     --secondary-text: #A27B5C;
-    --primary-bg-color: #2C3639;
-    --secondary-bg-color: #3F4E4F;
+    --primary-bg-color: #332519;
+    --secondary-bg-color: #826F66;
+    --transparent-color: rgba(17, 17, 17, 0.900);
     color: var(--primary-text);
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Simplicity';
+    src: url('./fonts/Simplicity.otf');
+}
+
+@font-face {
+    font-family: 'fjord-font';
+    src: url('./fonts/fjord-font.otf');
 }
 
 div, nav, header, body {
@@ -19,19 +31,22 @@ body {
 }
 
 h2 {
-    font-size: 3.2rem;
+    font-size: 5.6rem;
+    margin: 0;
+    padding: 0;
 }
 
 p {
-    font-size: 28px;
-    margin: 0;
+    font-size: 2.5rem;
     line-height: 40px;
+    line-height: 45px;
+
 }
 
 a {
     font-size: 1.3rem;
     text-decoration: none;
-    color: var(--secondary-text);
+    color: var(--primary-text);
     padding: 10px;
 
     &:hover {
@@ -39,47 +54,55 @@ a {
     }
 }
 
+h1, h2, h3 {
+    font-family: 'fjord';
+    font-weight: 200;
+}
 
 nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--primary-text);
+    background-color: rgba(17, 17, 17, 0.900);
     gap: 4rem;
     height: min(75px, 50vh);
+    width: 100%;
+    position: fixed;
+    top: 0;
 
-
-
+    a {
+        font-size: 1.8rem;
+    }
+ 
 }
 
 #content {
 
-
     .content__intro {
         background: url(./images/coffee1.jpg);
-        background-position-y: -150px;
+        background-position-y: -200px;
+        background-position-x: -230px;
         background-repeat: no-repeat;
         background-attachment: fixed;
-        background-size: cover;
-        background-color: rgba(0, 0, 0, 0.5);
-        // filter: brightness(40%);
-        font-size: 3rem;
+        background-size: auto;
+        font-size: 6rem;
         height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
 
         #hero-text {
-            color: whitesmoke;
+            color: var(--primary-text);
+            text-align: center;
         }
     }
     
 }
 
 .content__welcome {
-    margin-block: 2rem;
+    // margin-block: 2rem;
     margin-inline: auto;
-    width: min(1400px, 80vw);
+    // width: min(1400px, 80vw); 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -87,46 +110,125 @@ nav {
     padding: 2rem;
 
     p {
-        width: min(90%, 80vw);
+        width: min(75%, 80vw);
     }
 
     h2 {
-        padding: 1rem;
-        margin: 1rem;
+        padding: 0;
+        margin: 0;
     }
 }
 
+
 .content__whyUs {
-    background-color: #3F4E4F;
+    // background-color: var(--secondary-bg-color);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)) , url('./images/coffee-machine.jpg');
+    background-size:cover;
+    // background-position-y: -550px;
+    background-attachment: fixed;
     margin-inline: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     padding: 2rem;
+    
 
     p {
-        width: min(70%, 80vw);
+        width: min(75%, 80vw);
     }
 
     h2 {
-        padding: 1rem;
-        margin: 1rem;
+        margin: 0;
+        padding: 0;
     }
 }
 
 footer {
     display: flex;
     justify-content: space-around;
-    background-color: var(--primary-text);
-    height: min(60px, 10vh);
-    color: var(--secondary-text);
+    background-color: var(--primary-bg-color);
+    height: min(30px, 10vh);
+    
     // gap: 6rem;
     align-items: center;
+    justify-content: center;
     font-size: 1.3rem;
+
+    position: fixed;
+    width: 100%;
+    bottom: 0;
     
     a {
+        padding: 0;
         text-decoration: none;
-        color: var(--secondary-text);
+        color: var(--primary-text);
+    }
+}
+
+.content__menu {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 30% 30%;
+    background: linear-gradient(rgba(0, 0, 0, 0.379),rgba(0,0,0,0.379)), url('./images/coffee2.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    // text-align: center;
+    padding-block: 120px;
+
+    h2 {
+        margin: 1rem;
+        grid-column: span 2;
+        text-align: center;
+    }
+
+    h3 {
+        font-size: 5rem;
+        // margin: 400px;
+        text-align: center;
+        margin-block: 40px;
+    }
+
+    #tea-title {
+        grid-row: 2;
+        grid-column: 2;
+    }
+
+    #tea-list {
+        grid-column: 2;
+    }
+
+    #coffee-list {
+        grid-column: 1;
+    }
+
+    ul {
+        
+        padding: 0;
+        text-align: center;
+        margin: 0;
+        font-size: 2rem;
+    }
+
+    li {
+        list-style-type: none;
+        margin-block: 1.4rem;
+    }
+    
+}
+
+.about__us {
+    display: flex;  
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./images/coffee-house.jpg');
+    background-position-y: -200px;
+    // background-position-x: 120px;
+    background-attachment: fixed;
+    background-size: auto;
+    margin-bottom: 0;
+    min-height: 100vh;
+    place-content: center;
+
+    h2 {
+        margin-top: 10vh;
     }
 }
