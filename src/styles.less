@@ -12,6 +12,7 @@
 
 @font-face {
     font-family: 'Simplicity';
+    font-size-adjust: 5;
     src: url('./fonts/Simplicity.otf');
 }
 
@@ -31,13 +32,13 @@ body {
 }
 
 h2 {
-    font-size: 5.6rem;
+    font-size: 5rem;
     margin: 0;
     padding: 0;
 }
 
 p {
-    font-size: 2.5rem;
+    font-size: 2.1rem;
     line-height: 40px;
     line-height: 45px;
 
@@ -54,9 +55,15 @@ a {
     }
 }
 
+h1 {
+    font-size: 8rem;
+    // padding-inline: 10px;
+}
+
 h1, h2, h3 {
     font-family: 'fjord';
     font-weight: 200;
+    padding-inline: 10px;
 }
 
 nav {
@@ -64,7 +71,7 @@ nav {
     justify-content: center;
     align-items: center;
     background-color: rgba(17, 17, 17, 0.900);
-    gap: 4rem;
+    gap: max(4px, 7.5vw);
     height: min(75px, 50vh);
     width: 100%;
     position: fixed;
@@ -114,7 +121,7 @@ nav {
     }
 
     h2 {
-        padding: 0;
+        
         margin: 0;
     }
 }
@@ -169,12 +176,13 @@ footer {
 .content__menu {
     justify-content: center;
     display: grid;
-    grid-template-columns: 30% 30%;
+    grid-template-columns: 50vw 50vw;
     background: linear-gradient(rgba(0, 0, 0, 0.379),rgba(0,0,0,0.379)), url('./images/coffee2.jpg');
     background-size: cover;
     background-attachment: fixed;
     // text-align: center;
     padding-block: 120px;
+    min-height: 100vh;
 
     h2 {
         margin: 1rem;
