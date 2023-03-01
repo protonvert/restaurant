@@ -29,6 +29,7 @@
     "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
-    "normalize.css": "^8.0.1"
+    "normalize.css": "^8.0.1",
+    "url-loader": "^4.1.1"
   }
 }

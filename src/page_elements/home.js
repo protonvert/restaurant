@@ -12,7 +12,7 @@ const homeHTML =
         </div>
 
         <div class="content__welcome">
-          <h2>Experience the Benefits of Productivity</h2>
+          <h2>Benefits of Productivity</h2>
           <!-- <p id='motto'>Level up your productivity with a cup of our freshly brewed coffee.</p> -->
           <p>
             At The Coffee Hut, we believe that a great cup of coffee can do
@@ -32,7 +32,7 @@ const homeHTML =
           <h2>Why Us?</h2>
           <!-- <p id='motto'>Level up your productivity with a cup of our freshly brewed coffee.</p> -->
           <p>
-            At The Coffee Hut, we take great pride in providing our customers
+            We take great pride in providing our customers
             with the best coffee experience possible. Here are some reasons why
             you should choose us: Quality: We use only the finest coffee beans,
             which are expertly roasted and brewed to ensure a rich and flavorful
@@ -46,9 +46,7 @@ const homeHTML =
             Convenience: We offer both dine-in and takeout options, so you can
             enjoy our coffee on the go or in the comfort of our café. Overall,
             choosing The Coffee Hut means choosing quality, variety, atmosphere,
-            service, and convenience. We are committed to providing our
-            customers with the best coffee experience possible, and we look
-            forward to serving you soon.
+            service, and convenience.
           </p>
         </div>
 `

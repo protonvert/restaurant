@@ -1,7 +1,6 @@
 import style from "./styles.less";
 import loadPage from './loadpage';
 
-
 loadPage('home')
 
 // nav buttons ---------------------------------------

@@ -2,7 +2,7 @@
 const path = require("path");
 
 module.exports = {
-
+  mode: 'production',
   module: {
     rules: [
       {
@@ -13,9 +13,14 @@ module.exports = {
           "css-loader",
           "less-loader",
         ],
-      }
+      },
+      {
+        test: /\.(svg|woff|woff2|eot|ttf|otf)$/i,
+        type: 'asset/inline',
+      },
     ]
   },
+  
   
   entry: "./src/index.js",
   output: {

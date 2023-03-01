@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'Hillstown Sans aged';
+    src: url('./Hillstown Sans aged.ttf') format('truetype');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
 :root {
     padding: 0;
     margin: 0;
@@ -8,17 +15,6 @@
     --transparent-color: rgba(17, 17, 17, 0.900);
     color: var(--primary-text);
     box-sizing: border-box;
-}
-
-@font-face {
-    font-family: 'Simplicity';
-    font-size-adjust: 5;
-    src: url('./fonts/Simplicity.otf');
-}
-
-@font-face {
-    font-family: 'fjord-font';
-    src: url('./fonts/fjord-font.otf');
 }
 
 div, nav, header, body {
@@ -32,16 +28,18 @@ body {
 }
 
 h2 {
-    font-size: 5rem;
+    font-size: clamp(48px, 4rem, 8vw);
     margin: 0;
     padding: 0;
 }
 
 p {
-    font-size: 2.1rem;
+    font-size: clamp(22px, 1.8rem, 2vw);
+    // font-size: 2vw;
     line-height: 40px;
     line-height: 45px;
-
+    font-family: 'Clash Display', sans-serif;
+    margin: 4px;
 }
 
 a {
@@ -57,11 +55,10 @@ a {
 
 h1 {
     font-size: 8rem;
-    // padding-inline: 10px;
 }
 
 h1, h2, h3 {
-    font-family: 'fjord';
+    font-family: 'Telma', cursive;
     font-weight: 200;
     padding-inline: 10px;
 }
@@ -87,12 +84,10 @@ nav {
 
     .content__intro {
         background: url(./images/coffee1.jpg);
-        background-position-y: -200px;
-        background-position-x: -230px;
+        background-position-y: -1350px;
         background-repeat: no-repeat;
         background-attachment: fixed;
-        background-size: auto;
-        font-size: 6rem;
+        background-size: 2400px;    
         height: 100vh;
         display: flex;
         justify-content: center;
@@ -101,15 +96,19 @@ nav {
         #hero-text {
             color: var(--primary-text);
             text-align: center;
+            font-size: clamp(30px, 7.4rem, 10vw);
+            font-family: 'Telma', cursive;
+            // text-decoration: underline;
+
+            // font-size: 10rem;
+            // font-size: 15vw;
         }
     }
     
 }
 
 .content__welcome {
-    // margin-block: 2rem;
     margin-inline: auto;
-    // width: min(1400px, 80vw); 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -121,17 +120,14 @@ nav {
     }
 
     h2 {
-        
         margin: 0;
     }
 }
 
 
 .content__whyUs {
-    // background-color: var(--secondary-bg-color);
     background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)) , url('./images/coffee-machine.jpg');
     background-size:cover;
-    // background-position-y: -550px;
     background-attachment: fixed;
     margin-inline: auto;
     display: flex;
@@ -139,7 +135,6 @@ nav {
     align-items: center;
     text-align: center;
     padding: 2rem;
-    
 
     p {
         width: min(75%, 80vw);
@@ -156,12 +151,9 @@ footer {
     justify-content: space-around;
     background-color: var(--primary-bg-color);
     height: min(30px, 10vh);
-    
-    // gap: 6rem;
     align-items: center;
     justify-content: center;
     font-size: 1.3rem;
-
     position: fixed;
     width: 100%;
     bottom: 0;
@@ -176,11 +168,10 @@ footer {
 .content__menu {
     justify-content: center;
     display: grid;
-    grid-template-columns: 50vw 50vw;
+    grid-template-columns: repeat(2, 40%);
     background: linear-gradient(rgba(0, 0, 0, 0.379),rgba(0,0,0,0.379)), url('./images/coffee2.jpg');
     background-size: cover;
     background-attachment: fixed;
-    // text-align: center;
     padding-block: 120px;
     min-height: 100vh;
 
@@ -191,8 +182,7 @@ footer {
     }
 
     h3 {
-        font-size: 5rem;
-        // margin: 400px;
+        font-size: clamp(48px, 5rem, 8vw);
         text-align: center;
         margin-block: 40px;
     }
@@ -206,16 +196,22 @@ footer {
         grid-column: 2;
     }
 
+    #coffee-title {
+        grid-column: 1;
+    }
+
     #coffee-list {
         grid-column: 1;
     }
 
-    ul {
-        
+    ul {        
         padding: 0;
         text-align: center;
         margin: 0;
-        font-size: 2rem;
+        font-size: clamp(20px, 1.8rem, 2.3vw);
+        // font-size: 2.3vw;
+    font-family: 'Clash Display', sans-serif;
+
     }
 
     li {
@@ -229,7 +225,6 @@ footer {
     display: flex;  
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./images/coffee-house.jpg');
     background-position-y: -200px;
-    // background-position-x: 120px;
     background-attachment: fixed;
     background-size: auto;
     margin-bottom: 0;
